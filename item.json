@@ -1,0 +1,27 @@
+[
+  {
+    "Id" : 1,
+    "Color": "Black",
+    "Desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, nisi!",
+    "Image": "https://firebasestorage.googleapis.com/v0/b/test1-35123.appspot.com/o/BlackShirt.jpg?alt=media&token=ef4d886f-08d3-4b61-80ec-d7863b52c06c",
+    "Name": "Black Shirt",
+    "Price": "$5"
+  },
+  {
+    "Id" : 2,
+    "Color": "Red",
+    "Desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, nisi!",
+    "Image": "https://firebasestorage.googleapis.com/v0/b/test1-35123.appspot.com/o/RedShirt.jpg?alt=media&token=944e6d6b-91a7-478b-984c-557a77a7e4bf",
+    "Name": "Red Shirt",
+    "Price": "$6"
+  },
+  {
+    "Id" : 3,
+    "Color": "Blue",
+    "Desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, nisi!",
+    "Image": "https://firebasestorage.googleapis.com/v0/b/test1-35123.appspot.com/o/BlueShirt.jpg?alt=media&token=ac052b15-801a-4c69-8855-859fde8d37fd",
+    "Name": "Blue Shirt",
+    "Price": "$7"
+  }
+
+]

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script  src="index.js"></script>
+    <link rel="icon" type="image/x-icon" href="./assets/uPay Logo.png">
+    <title>uPay</title>
+</head>
+
+<body>
+    
+    <section id="about-brand">
+        <nav class="nav__bar">
+            <figure class="nav__bar--logo">
+                <img class="logo" src="./assets/uPay Logo2.png" alt="">
+            </figure>    
+            <div class="nav__links-container">
+              <ul class="nav__links">
+                <li><a class="nav__primary--link" href="./index.html" >Home</a></li>
+                <li><a class="nav__primary--link" href="./about.html" >About</a></li>
+                <li><a class="nav__primary--link" href="./browse.html">Browse</a></li>
+              </ul>
+            </div>
+        </nav>
+
+    <section id="products">
+          <header>
+                  <div class="container">
+                    <div class="row">
+                      <div class="product-list">
+                        <div class="product">
+                          <div class="product-card">
+                            <div class="product-card__container" onclick="showProductItem()">
+                            <h3>Name</h3>
+                            <p><b>Description</b></p>
+                            <img src="${product.Image}" alt="Product Image" class="product-image">
+                            <p><b>Price</b></p>
+                            <p><b>Color</b></p>                            
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </header>
+      </section>
+
+    </section>
+    
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+      
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyCaUhCxjBSp-uXmrd254j-lI4uI4csr7ng",
+        authDomain: "test1-35123.firebaseapp.com",
+        databaseURL: "https://test1-35123-default-rtdb.firebaseio.com",
+        projectId: "test1-35123",
+        storageBucket: "test1-35123.appspot.com",
+        messagingSenderId: "754744996926",
+        appId: "1:754744996926:web:bbe5a88c78344604cccd6f"
+      };
+      
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      </script>
+
+</body>
+</html>
