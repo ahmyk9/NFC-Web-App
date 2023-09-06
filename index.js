@@ -1,15 +1,11 @@
 
 async function productsFetcher() {
-    const productsResponse = await fetch("https://test1-35123-default-rtdb.firebaseio.com/products.json");
+    const productsResponse = await fetch("https://test1-35123-default-rtdb.firebaseio.com/.json");
     const productsData = await productsResponse.json();
     const productElement = document.querySelector(".product");       
-
-    // Convert the productsData object into an array
-    const productsArray = Object.values(productsData); //idk what this is
-    
     console.log(productsData);
-    console.log(productsArray);
-    productElement.innerHTML = productsArray.map((product) => userHTML(product)).join("");
+
+    productElement.innerHTML = productsData.map((product) => userHTML(product)).join("");
 }
 productsFetcher();
 
