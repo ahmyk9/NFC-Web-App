@@ -4,7 +4,7 @@ async function itemFetcher(){
     const displayItem = await fetch(`https://test1-35123-default-rtdb.firebaseio.com/${itemID}.json`)
     const displayItemData =  await displayItem.json()
     
-    // console.log(displayItemData)
+    console.log(displayItemData)
     
     
     
