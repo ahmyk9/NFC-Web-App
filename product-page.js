@@ -1,3 +1,7 @@
+
+
+
+
 async function itemFetcher(){
 
     const itemID = localStorage.getItem("item")
@@ -23,8 +27,8 @@ async function itemFetcher(){
     ItemElement.querySelector("#item__Image").src = displayItemData.Image;
 
 
-
 }
 
 itemFetcher()
+
 
