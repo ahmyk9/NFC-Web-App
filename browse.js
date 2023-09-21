@@ -10,25 +10,25 @@ async function productsFetcher() {
 productsFetcher();
 
 
-
-function showProductItem(item) {
-    localStorage.setItem("item", item);
-    window.location.href = `${window.location.origin}/product-page.html`;
-    console.log(item)
-}
-
-
-
-
 function userHTML(product){
     return`
     <div class="product__card" onclick="showProductItem(${product.Id})">
-        <h3 class="product__name">${product.Name}</h3>
-        <img src="${product.Image}" alt="Product Image" class="product__image"">
-        <p class="product__price"><b>${product.Price}</b></p>
+    <h3 class="product__name">${product.Name}</h3>
+    <img src="${product.Image}" alt="Product Image" class="product__image"">
+    <p class="product__price"><b>${product.Price}</b></p>
+    <a href="product-page.html?id=${product.Id}">0000</a>
     </div>
     `
 }
 
+function showProductItem(item) {
+    localStorage.setItem("item", item);
+    window.location.href = `${window.location.origin}/product-page.html`;
+    // window.location.href = `${window.location.origin}/product-page.html?id=${product.Id}`;
+    
+    console.log(item)
+}
+
+//---------------------------------------------
 
 
