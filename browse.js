@@ -11,12 +11,14 @@ productsFetcher();
 
 
 function userHTML(product){
+    // first we make a a tag contain product id and lead to product-page
     return`
     <div class="product__card" onclick="showProductItem(${product.Id})">
+    <a href="product-page.html?id=${product.Id}">
     <h3 class="product__name">${product.Name}</h3>
     <img src="${product.Image}" alt="Product Image" class="product__image"">
     <p class="product__price"><b>${product.Price}</b></p>
-    <a href="product-page.html?id=${product.Id}">0000</a>
+    </a>
     </div>
     `
 }
