@@ -26,4 +26,29 @@ const displayItem = await fetch(
   ItemElement.querySelector("#item__Image").src = displayItemData.Image;
 }
 
-itemFetcher();
+itemFetcher()
+
+
+console.log(window.location)
+
+// Handle URL changes and load the appropriate product page
+async function handleURLChange() {
+
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get("productId");
+
+    if (productId) {
+        itemFetcher(productId);
+    } else {
+        // Handle invalid or no product ID in the URL
+    }
+}
+
+// Add event listener for URL changes
+window.addEventListener("popstate", handleURLChange);
+
+// Initial load
+handleURLChange();
+
+
