@@ -1,5 +1,5 @@
 let itemID = window.location.href.slice(-1)
-
+// we change this into fully search with href link with id
 const displayItem = await fetch(
     `https://test1-35123-default-rtdb.firebaseio.com/${itemID}.json`
     );
@@ -27,4 +27,6 @@ const displayItem = await fetch(
 }
 
 itemFetcher();
+
+// No need to change id now bc we now get id from href
 

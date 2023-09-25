@@ -11,6 +11,7 @@ productsFetcher();
 
 
 function userHTML(product){
+    // first we make a a tag contain product id and lead to product-page
     return`
     <div class="product__card" onclick="showProductItem(${product.Id})">
     <a href="product-page.html?id=${product.Id}">
