@@ -54,30 +54,18 @@ handleURLChange();
 
 // NFC Scanning
 
-const scan = async() =>{
-    var paragraph = document.getElementById("myParagraph");
-    if ('NDEFReader' in window) { 
-        try {
-            const ndef = new window.NDEFReader();
-            await ndef.scan();
-            
-            console.log("Scan started successfully.");
-            ndef.onreadingerror = () => {
-                console.log("Cannot read data from the NFC tag. Try another one?");
-            };
-            
-            ndef.onreading = event => {
-                console.log("NDEF message read.");
-                paragraph.innerHTML = "This is the new content.";
-                onReading(event);
-                setActions({
-                    scan: 'scanned',
-                    write: null
-                });
-            };
 
-        } catch(error){
-            console.log(`Error! Scan failed to start: ${error}.`);
+    var paragraph = document.getElementById("myParagraph");
+    if ('NDEFReader' in window) {
+        const ndef = new NDEFReader();
+        await ndef.scan();
+        console.log("> Scan started");
+      
+        ndef.onreading = event => {
+          const decoder = new TextDecoder();
+          console.log(`> Record type: ${event.message.records[0].recordType}`);
+          console.log(`> Data: ${decoder.decode(event.message.records[0].data)}`);
+          paragraph.innerHTML = "This is the new content.";
         };
-    }
-};
+      }
+      
